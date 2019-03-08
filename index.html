@@ -1,8 +1,37 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>
 <script>
-  var str = "ARRESTME!";
+var lines = [
+"　／￣￣￣￣￣￣￣￣￣￣＼     ",
+"　|　おまわりさんコイツです！ |　　　　　　　　＼　　　|　　　　／",
+"　＼＿　 ＿＿＿＿＿＿＿＿／    　　　　　 　　 ＿┌┬┬┬┐＿",
+"　　　　∨　　　　＿＿＿       　　 　　　　――┴┴┴┴┴―、　　　　　 　　　＿＿＿＿＿＿＿＿＿＿",
+"　　　　　　　　,r'つ＠＝,r'  　　 　　　//　 ∧　// <_(＠)> ||. ＼　　　　　　／",
+"　　　　　　　　.| （-＿- ）  　　_＿[//＿_(´д_//[ ].ﾟДﾟ,,) || ＿ ＼＿_ ＜ 逮捕しにきました",
+"　　　 （･ω･´）､/~У￣|ﾞｉ    　lﾛ|=☆= |ﾛﾛﾟ|■■|■■∪警視庁■■|| 　 ＼＿＿＿＿＿＿＿＿＿＿",
+"　　　ﾟこ､　　つ　|=◎＝∪     　| ∈口∋￣_l＿＿ｌ⌒ｌ_＿＿_|＿__ｌ⌒ｌ___||",
+"　　　　 しー-Ｊ （＿（＿_）  　　￣￣`ー'￣ 　　`ー'　　`ー'　 　`ー'"
+]
+
   var i = 0;
+  var toRight = true;
   while (1) {
-      alert(str[i]);
-  	  i  = (i + 1) % str.length;
+  	let str = "";
+  	lines.forEach(function(line) {
+        str += line.substring(i, i + 30) + "\n";
+  	});
+  	alert(str);
+  	if (toRight) {
+  		i += 3;
+  		if (i > 50) {
+  			toRight = false;
+  		}
+  	} else {
+  		i -= 3;
+  		if (i <= 0) {
+  			toRight = true;
+  		}
+  	}
   }
 </script>
+</body>
+</html>
