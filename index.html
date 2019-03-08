@@ -1,5 +1,8 @@
 <script>
+  var str = "ARRESTME!";
+  var i = 0;
   while (1) {
-      alert("&#x1f6a8;Arrest me!&#x1f6a8;");
+      alert(str[i]);
+  	  i  = (i + 1) % str.length;
   }
 </script>
